@@ -1,17 +1,19 @@
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword(){
-    console.log("Hello! Would you like to generate a new password?")
-
-    return "<GENERATED PASSWORD>"
+// prompt user for new password for yes or no
+   var starterQuery = window.confirm("Would you like us to generate a  unique password? ")
+   console.log(starterQuery)    
 }
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  
   passwordText.value = password;
 
 }
