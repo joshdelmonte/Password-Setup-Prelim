@@ -1,6 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function randomInt(min, max){
+   if (!max) {
+    max = min;
+    min = 0;
+   }
+    return Math.floor(min + (1 - rand) + rand*max);
+}
+
+function getRandomItem(list){
+    return list[randomInt(list.length)]
+}
+
 function generatePassword(){
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
@@ -21,7 +33,7 @@ function generatePassword(){
     window.alert("Invalid input. Please enter a numerical value between 8-128.");
     return;
     }
-
+// query spefications they would like in password
     var wantedNumbers = window.confirm("Would you like numbers in your new password?");
     var wantedSymbols = window.confirm("Care for any unique characters in your new password?");
     var wantedLowLetters = window.confirm("Would you like lower case letters in your new password?");
@@ -51,6 +63,18 @@ function generatePassword(){
         if (wantedUpperChars === true){
             optOneiroi.push(paterNominis);
         }
+        
+
+        var generatePassword = "";
+
+        for (var i = 0; i < passwordLength; i++){
+            var randomList = getRandomItem(optOneiroi);
+            var randomChar = getRandomItem(randomList);
+            generatePassword += randomChar;
+
+        }
+
+        console.log(generatePassword)
     
     
 
