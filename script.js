@@ -6,7 +6,7 @@ function randomInt(min, max){
     max = min;
     min = 0;
    }
-    return Math.floor(min + (1 - rand) + rand*max);
+    return Math.floor(Math.random()*max);
 }
 
 function getRandomItem(list){
