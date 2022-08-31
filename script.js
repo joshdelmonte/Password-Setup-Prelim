@@ -46,7 +46,7 @@ function generatePassword(){
 
     var optOneiroi = []
 
-    for (var i = 0; i < puerNominis.length; i++){
+    for (var i = 0; i < puerNominis.length; i++){}
         paterNominis[i] = puerNominis[i].toUpperCase();
 
         if (wantedNumbers === true){
@@ -77,9 +77,6 @@ function generatePassword(){
         console.log(generatePassword)
     
     
-
-
-}
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
