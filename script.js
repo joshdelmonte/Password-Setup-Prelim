@@ -2,17 +2,20 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+function randomInt() {
+    
+}
+
 function generatePassword(){
 // prompt user for new password for yes or no
-   var starterQuery = window.confirm("Would you like us to generate a  unique password? ")
+    var starterQuery = window.confirm("Would you like us to generate a  unique password? ")
    console.log(starterQuery)    
 // prompt user for password length
-   var numberInput = window.prompt("How many characters would you like your password to be?")
+    var numberInput = window.prompt("How many characters would you like your password to be?")
 // set perameters for password length
-   var passwordLength = parseInt(numberInput)
+    var passwordLength = parseInt(numberInput)
 // query user if they want numbers, symbols, letters, and speciale characteurs
 //set values for numbers, symbols, letters, and special chars
-
     var wantedNumbers = window.confirm("Would you like numbers in your new password?")
     
     var numeroNominis = ["1","2","3","4","5","6","7","8","9"]
@@ -29,6 +32,10 @@ function generatePassword(){
     
     var paterNominis = []
 
+    var generatePassword = ""
+
+    for (var i = 0; i < passwordLength; i++)
+    
     optOneiroi = []
     
     for (var i = 0; i < puerNominis.length; i++){
@@ -54,6 +61,7 @@ function generatePassword(){
     console.log(optOneiroi)
 
     }
+
     if (passwordLength < 8 || passwordLength > 128) {
         window.alert("Password length must be between 8-128 characters.")
         return
@@ -64,9 +72,9 @@ function generatePassword(){
         return
     }
 
-//set values for numbers, symbols, letters, and special chars
 }
 
+//set values for numbers, symbols, letters, and special chars
 
 
 // Write password to the #password input
