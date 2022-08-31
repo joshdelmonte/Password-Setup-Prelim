@@ -27,7 +27,35 @@ function generatePassword(){
     var wantedLowLetters = window.confirm("Would you like lower case letters in your new password?");
     var wantedUpperChars = window.confirm("Would you like to add upper cased letters to further enhance your new password?");
 
+    var numeroNominis = ["1","2","3","4","5","6","7","8","9"];
+    var symbolumNominis = ["!","@","#","$","%","&","*"];
+    var puerNominis = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var paterNominis = [];
+
+    var optOneiroi = []
+
+    for (var i = 0; i < puerNominis.length; i++){
+        paterNominis[i] = puerNominis[i].toUpperCase();
+
+        if (wantedNumbers === true){
+            optOneiroi.push(numeroNominis);
+        }
+        if (wantedSymbols === true){
+            optOneiroi.push(symbolumNominis);
+        }
+    
+        if (wantedLowLetters === true){
+            optOneiroi.push(puerNominis);
+        }
+    
+        if (wantedUpperChars === true){
+            optOneiroi.push(paterNominis);
+        }
+    
+    
+
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
